@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "11665852346",
+    "firebase_url": "https://prdclientapp.firebaseio.com",
+    "project_id": "prdclientapp",
+    "storage_bucket": "prdclientapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11665852346:android:b40a0f9dd88f76af",
+        "android_client_info": {
+          "package_name": "com.prd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11665852346-2qjj3pco66sa3ufl8hd0kjntl9720i0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prd",
+            "certificate_hash": "a3ec8338859e676ab0bd80e3e63c25aad3d054e0"
+          }
+        },
+        {
+          "client_id": "11665852346-s1t3g1g0ocp5rrb5iqvp3a7sger5bhm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvShyxkfEvy1x3aHkMNPNj1JuE6J0jgo8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11665852346-s1t3g1g0ocp5rrb5iqvp3a7sger5bhm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
