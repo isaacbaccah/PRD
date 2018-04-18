@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("PRD");
 
-
-
     }
 
     @Override
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             sendToLogin();
         }
     }
-
 
 
     @Override
@@ -60,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.action_logout_btn:
                 logout();
+                return true;
+
+            case R.id.action_settings_btn:
+
+                Intent settingsIntent = new Intent(MainActivity.this, SetupActivity.class);
+                startActivity(settingsIntent);
+
                 return true;
 
                 default:

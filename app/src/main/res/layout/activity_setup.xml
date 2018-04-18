@@ -5,106 +5,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.prd.LoginActivity">
+    tools:context="com.prd.SetupActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/setupToolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Account Setup"
+        app:titleTextColor="@android:color/white" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setup_image"
+        android:layout_width="204dp"
+        android:layout_height="146dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/dflt_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_progress"
-        app:srcCompat="@drawable/prdimg0" />
+        app:layout_constraintTop_toBottomOf="@+id/setup_progress" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Welcome!"
+        android:layout_marginTop="20dp"
+        android:text="Upload Profile picture here."
         android:textColor="@android:color/white"
-        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/setup_image" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/setup_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="@android:color/white"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="16dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
         android:textColor="@android:color/white"
         android:textColorHint="@color/whiteTransparentHalf"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/login_pasword"
+        android:id="@+id/setup_phone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="@android:color/white"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="16dp"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:padding="15dp"
         android:textColor="@android:color/white"
         android:textColorHint="@color/whiteTransparentHalf"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_email" />
+        app:layout_constraintTop_toBottomOf="@+id/setup_name" />
+
+    <EditText
+        android:id="@+id/setup_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="GhanaPOST Address"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/whiteTransparentHalf"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_phone" />
 
     <Button
-        android:id="@+id/login_btn1"
+        android:id="@+id/setup_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/holo_blue_bright"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="LOG IN"
+        android:padding="15dp"
+        android:text="Save Account Settings"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_pasword" />
-
-    <Button
-        android:id="@+id/login_btn2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@android:color/white"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp"
-        android:text="Need a new Account?"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/setup_address" />
 
     <ProgressBar
-        android:id="@+id/login_progress"
+        android:id="@+id/setup_progress"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -112,7 +122,8 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setupToolbar"
         tools:visibility="invisible" />
+
 
 </android.support.constraint.ConstraintLayout>

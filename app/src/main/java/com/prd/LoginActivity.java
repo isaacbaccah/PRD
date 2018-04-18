@@ -40,6 +40,16 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn2 = findViewById(R.id.login_btn2);
         loginProgress = findViewById(R.id.login_progress);
 
+        loginBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent regIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(regIntent);
+
+            }
+        });
+
         loginBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

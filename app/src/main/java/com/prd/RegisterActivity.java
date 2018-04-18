@@ -22,15 +22,10 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText regEmail;
     private EditText regPass;
     private EditText regConfirmPass;
-
     private Button regBtn1;
     private Button regBtn2;
-
     private ProgressBar regProgress;
-
     private FirebaseAuth mAuth;
-
-
 
 
     @Override
@@ -38,14 +33,26 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
+        mAuth = FirebaseAuth.getInstance();
 
         regEmail = findViewById(R.id.reg_email);
         regPass = findViewById(R.id.reg_pass);
         regConfirmPass = findViewById(R.id.reg_confirm_pass);
         regBtn1 = findViewById(R.id.reg_btn1);
         regBtn2 = findViewById(R.id.reg_btn2);
-        regProgress = findViewById(reg_progress);
+        regProgress = findViewById(R.id.reg_progress);
+
+
+
+        regBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+
+            }
+        });
+
 
         regBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +63,6 @@ public class RegisterActivity extends AppCompatActivity {
                 String confirm_pass = regConfirmPass.getText().toString();
 
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(pass) & !TextUtils.isEmpty(confirm_pass)) {
-
                     if(pass.equals(confirm_pass)){
 
                         regProgress.setVisibility(View.VISIBLE);
@@ -66,11 +72,15 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
-                                    sendToMain();
+                                    Intent setupIntent = new Intent(RegisterActivity.this, SetupActivity.class);
+                                    startActivity(setupIntent);
+                                    finish();
 
 
                                 } else {
 
+                                    String errorMessage = task.getException().getMessage();
+                                    Toast.makeText(RegisterActivity.this, "Error : " + errorMessage, Toast.LENGTH_LONG).show();
 
                                 }
                                 regProgress.setVisibility(View.INVISIBLE);
@@ -99,8 +109,6 @@ public class RegisterActivity extends AppCompatActivity {
         if (currentUser != null) {
 
             sendToMain();
-
-
 
         }
     }
