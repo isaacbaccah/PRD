@@ -62,6 +62,43 @@ public class RegisterActivity extends AppCompatActivity {
                 String pass = regPass.getText().toString();
                 String confirm_pass = regConfirmPass.getText().toString();
 
+                if (TextUtils.isEmpty(email) && TextUtils.isEmpty(pass) & TextUtils.isEmpty(confirm_pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(email) && TextUtils.isEmpty(pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(email) && TextUtils.isEmpty(confirm_pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(pass) && TextUtils.isEmpty(confirm_pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(confirm_pass)) {
+                    Toast.makeText(getApplication(), "Enter details to register", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
+
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(pass) & !TextUtils.isEmpty(confirm_pass)) {
                     if(pass.equals(confirm_pass)){
 

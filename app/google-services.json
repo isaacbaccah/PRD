@@ -49,6 +49,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11665852346:android:b3d99d4c3127074b",
+        "android_client_info": {
+          "package_name": "com.prdadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11665852346-dk5kn5nuso6jk8f8dtsv01n78hu37b15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prdadmin",
+            "certificate_hash": "a3ec8338859e676ab0bd80e3e63c25aad3d054e0"
+          }
+        },
+        {
+          "client_id": "11665852346-s1t3g1g0ocp5rrb5iqvp3a7sger5bhm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvShyxkfEvy1x3aHkMNPNj1JuE6J0jgo8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11665852346-s1t3g1g0ocp5rrb5iqvp3a7sger5bhm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

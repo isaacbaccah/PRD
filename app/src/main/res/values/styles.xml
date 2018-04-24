@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
+
+        <!-- color of the menu overflow icon -->
+        <item name="android:textColorSecondary">@color/whiteTransparentHalf</item>
+    </style>
+
+
+
 </resources>

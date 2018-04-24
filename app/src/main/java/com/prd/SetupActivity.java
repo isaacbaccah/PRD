@@ -91,7 +91,7 @@ public class SetupActivity extends AppCompatActivity {
 
 
                         RequestOptions placeholderRequest = new RequestOptions();
-                        placeholderRequest.placeholder(R.drawable.dflt_img);
+                        placeholderRequest.placeholder(R.drawable.dfltpimg);
                         setupName.setText(name);
                         setupPhone.setText(phone);
                         setupAddress.setText(address);
@@ -120,8 +120,44 @@ public class SetupActivity extends AppCompatActivity {
                 final String user_name = setupName.getText().toString();
                 final String user_phone = setupPhone.getText().toString();
                 final String user_address = setupAddress.getText().toString();
-                setupProgress.setVisibility(View.VISIBLE);
 
+
+                if (TextUtils.isEmpty(user_name) && TextUtils.isEmpty(user_phone) && TextUtils.isEmpty(user_address)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_name) && TextUtils.isEmpty(user_phone)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_name) && TextUtils.isEmpty(user_address)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_phone) && TextUtils.isEmpty(user_address)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_name)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_phone)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(user_address)) {
+                    Toast.makeText(getApplication(), "Enter details to complete Account Setup", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                setupProgress.setVisibility(View.VISIBLE);
 
                 if (isChanged) {
 

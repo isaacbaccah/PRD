@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginBtn1;
     private Button loginBtn2;
     private ProgressBar loginProgress;
+    private Button forgotpass;
 
     private FirebaseAuth mAuth;
 
@@ -39,6 +40,15 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn1 = findViewById(R.id.login_btn1);
         loginBtn2 = findViewById(R.id.login_btn2);
         loginProgress = findViewById(R.id.login_progress);
+        forgotpass = findViewById(R.id.btn_forgot_password);
+
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotIntent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+                startActivity(forgotIntent);
+            }
+        });
 
         loginBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +69,24 @@ public class LoginActivity extends AppCompatActivity {
                 //to collect input data @naenae
                 String loginEmail = loginEmailText.getText().toString();
                 String loginPass = loginPassText.getText().toString();
+
+                if (TextUtils.isEmpty(loginEmail) && TextUtils.isEmpty(loginPass)) {
+                    Toast.makeText(getApplication(), "Enter Email and Password to log in", Toast.LENGTH_LONG).show();
+                    return;
+
+                }
+
+                if (TextUtils.isEmpty(loginEmail)) {
+                    Toast.makeText(getApplication(), "Enter Email log in", Toast.LENGTH_LONG).show();
+                    return;
+
+                }
+
+                if (TextUtils.isEmpty(loginPass)) {
+                    Toast.makeText(getApplication(), "Enter Password to log in", Toast.LENGTH_LONG).show();
+                    return;
+
+                }
 
                 if (!TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty(loginPass)) {
                     loginProgress.setVisibility(View.VISIBLE);
@@ -109,4 +137,6 @@ public class LoginActivity extends AppCompatActivity {
         finish();
 
     }
+
+
 }

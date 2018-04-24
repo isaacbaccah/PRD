@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@color/blue"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="LOG IN"
@@ -94,10 +94,10 @@
         android:background="@android:color/white"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
-        android:text="Need a new Account?"
+        android:text="First time user? Sign up here!"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_blue_bright"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -114,5 +114,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:text="Forgot your password?"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn1" />
 
 </android.support.constraint.ConstraintLayout>
