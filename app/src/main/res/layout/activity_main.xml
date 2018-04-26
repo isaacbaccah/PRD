@@ -14,7 +14,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="PRD"
         app:titleTextColor="@android:color/white"
         app:theme="@style/ThemeToolbar"/>
 

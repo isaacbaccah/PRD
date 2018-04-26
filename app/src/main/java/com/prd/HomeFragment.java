@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
         requestAddress = view.findViewById(R.id.request_address);
         requestAmount = view.findViewById(R.id.request_amount);
         requestBtn = view.findViewById(R.id.request_btn);
-        requestBtn.setOnClickListener(mClickListener);
+
 
 
         requestBtn.setOnClickListener(new View.OnClickListener() {
@@ -154,30 +154,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    View.OnClickListener mClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
 
-            namerequest = requestName.getText().toString();
-            phonerequest = requestPhone.getText().toString();
-            addressrequest = requestAddress.getText().toString();
-            amountrequest = requestAmount.getText().toString();
-
-            FragmentTransaction transection=getFragmentManager().beginTransaction();
-            HistoryFragment hfragment = new HistoryFragment();
-
-//using Bundle to send data
-            Bundle bundle = new Bundle();
-            bundle.putString("name", namerequest);
-            bundle.putString("phone", phonerequest);
-            bundle.putString("address", addressrequest);
-            bundle.putString("amount", amountrequest);
-
-            hfragment.setArguments(bundle); //data being send to SecondFragment
-            transection.replace(R.id.main_container, hfragment);
-            transection.commit();
-        }
-    };
 
 
 }

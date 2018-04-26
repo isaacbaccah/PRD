@@ -12,7 +12,7 @@
     <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
 
         <!-- color of the menu overflow icon -->
-        <item name="android:textColorSecondary">@color/whiteTransparentHalf</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 
 
